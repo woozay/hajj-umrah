@@ -9,6 +9,11 @@ $white: #fff;
 $black: #000;
 $light-grey: #777;
 $gold: #b89e15;
+$yellow: #e8cb2f;
+
+$primary: $gold;
+$warning: $yellow;
+
 
 $navbar-item-active-background-color: $white;
 $navbar-item-color: $light-grey;
@@ -45,7 +50,7 @@ $positions: (
     $sizeKey: nth($size, 1);
     $sizeValue: nth($size, 2);
     .#{$marginKey}#{$separator}#{$sizeKey} {
-        margin: sizeValue($sizeKey, $sizeValue);
+        margin: sizeValue($sizeKey, $sizeValue) +'!important';
     }
     .#{$paddingKey}#{$separator}#{$sizeKey} {
         padding: sizeValue($sizeKey, $sizeValue);
@@ -54,7 +59,7 @@ $positions: (
         $posKey: nth($position, 1);
         $posValue: nth($position, 2);
         .#{$marginKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
-            margin-#{$posValue}: sizeValue($sizeKey, $sizeValue);
+            margin-#{$posValue}: sizeValue($sizeKey, $sizeValue) +'!important';
         }
         .#{$paddingKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
             padding-#{$posValue}: sizeValue($sizeKey, $sizeValue);
