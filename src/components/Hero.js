@@ -12,14 +12,14 @@ export default () => {
             <div class="container">
             <div class="columns has-background-warning">
                     <div class="column">
-                        <h2 class="title has-text-centered">
+                        <h2 class="title has-text-white has-text-centered">
                             Nova Hajj Umrah
                         </h2>
                     </div>
                 </div>
                 <div class="columns has-background-warning m-t-sm">
                     <div class="column">
-                        <h2 class="subtitle has-text-centered">
+                        <h2 class="subtitle has-text-white has-text-centered">
                             Providing Trips for Hajj and Umrah since 1993
                         </h2>
                     </div>

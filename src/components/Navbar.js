@@ -21,7 +21,7 @@ export default () => {
             <div id="navbarBasicExample" className={"navbar-menu " + (navbarActive ? 'is-active' : '')} >
                 <div className="navbar-end">
                     <Link className="navbar-item" activeClassName="is-active" to="/">Home</Link>
-                    <Link className="navbar-item" activeClassName="is-active" to="/about">About</Link>
+                    <Link className="navbar-item" activeClassName="is-active" to="/blog">Blog</Link>
                     <Link className="navbar-item" activeClassName="is-active" to="/contact">Contact</Link>
                 </div>
             </div>

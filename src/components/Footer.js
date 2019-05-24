@@ -1,7 +1,8 @@
 import React from 'react';
 
 export default () => {
-    return <footer class="footer">
+    return <footer class="footer has-background-white-ter">
+        <div className="container">
         <div className="columns">
             <div className="column">
                 <div class="content">
@@ -13,6 +14,7 @@ export default () => {
                     <p>21 City Road</p>
                 </div>
             </div>
+        </div>
         </div>
     </footer>
 }

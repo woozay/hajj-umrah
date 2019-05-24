@@ -15,8 +15,14 @@ export default () => {
         </div>
         <BlogRoll />
         <div className="column is-12 has-text-centered">
-          <Link className="btn" to="/blog">Read more</Link>
+          <Link className="button is-primary is-outlined" to="/blog">Read more</Link>
         </div>
+      </div>
+    </section>
+    <section className="section has-background-dark">
+      <div className="container content has-text-white">
+        <h1 className="has-text-white">About</h1>
+        <p>Nova Hajj Umrah have been carrying out tours since 1993.</p>
       </div>
     </section>
   </Layout>
