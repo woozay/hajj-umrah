@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default () => {
+export default ({ heading, subheading, image }) => {
     return <section class="hero is-medium"
         style={{
-            backgroundImage: `url(/img/hajj-background.jpg)`,
+            backgroundImage: `url(${
+                !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+            })`,
             backgroundPosition: `top left`,
             backgroundSize: 'cover',
             backgroundAttachment: `fixed`,
@@ -13,14 +15,14 @@ export default () => {
             <div class="columns has-background-warning">
                     <div class="column">
                         <h2 class="title has-text-white has-text-centered">
-                            Nova Hajj Umrah
+                            { heading }
                         </h2>
                     </div>
                 </div>
                 <div class="columns has-background-warning m-t-sm">
                     <div class="column">
                         <h2 class="subtitle has-text-white has-text-centered">
-                            Providing Trips for Hajj and Umrah since 1993
+                            { subheading }
                         </h2>
                     </div>
                 </div>

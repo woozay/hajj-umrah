@@ -5,9 +5,10 @@ import FixedImage from "../components/FixedImage";
 import Hero from "../components/Hero";
 import BlogRoll from "../components/BlogRoll";
 
-export default () => {
+const IndexPage = ({data}) => {
+  const { frontmatter } = data.markdownRemark
   return <Layout>
-    <Hero />
+    <Hero heading={frontmatter.heading} subheading={frontmatter.subheading} image={frontmatter.image} />
     <section className="section">
       <div className="container">
         <div className="column is-12">
@@ -27,3 +28,25 @@ export default () => {
     </section>
   </Layout>
 }
+export default IndexPage
+
+export const pageQuery = graphql`
+  query IndexPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      frontmatter {
+        title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        heading
+        subheading
+        description
+        
+      }
+    }
+  }
+`
