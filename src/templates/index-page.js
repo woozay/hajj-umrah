@@ -23,7 +23,7 @@ const IndexPage = ({data}) => {
     <section className="section has-background-dark">
       <div className="container content has-text-white">
         <h1 className="has-text-white">About</h1>
-        <p>Nova Hajj Umrah have been carrying out tours since 1993.</p>
+        <p>{ frontmatter.about }</p>
       </div>
     </section>
   </Layout>
@@ -45,7 +45,7 @@ export const pageQuery = graphql`
         heading
         subheading
         description
-        
+        about
       }
     }
   }
