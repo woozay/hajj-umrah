@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default ({ heading, subheading, image }) => {
-    return <section class="hero is-medium"
+    return <section className="hero is-medium"
         style={{
             backgroundImage: `url(${
                 !!image.childImageSharp ? image.childImageSharp.fluid.src : image
@@ -10,18 +10,18 @@ export default ({ heading, subheading, image }) => {
             backgroundSize: 'cover',
             backgroundAttachment: `fixed`,
         }}>
-        <div class="hero-body">
-            <div class="container">
-            <div class="columns has-background-warning">
-                    <div class="column">
-                        <h2 class="title has-text-white has-text-centered">
+        <div className="hero-body">
+            <div className="container">
+            <div className="columns has-background-warning">
+                    <div className="column">
+                        <h2 className="title has-text-white has-text-centered">
                             { heading }
                         </h2>
                     </div>
                 </div>
-                <div class="columns has-background-warning m-t-sm">
-                    <div class="column">
-                        <h2 class="subtitle has-text-white has-text-centered">
+                <div className="columns has-background-warning m-t-sm">
+                    <div className="column">
+                        <h2 className="subtitle has-text-white has-text-centered">
                             { subheading }
                         </h2>
                     </div>

@@ -34,23 +34,18 @@ export default () => {
       }
     }
   `)
-  const Posts = data.allMarkdownRemark.edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <p>{JSON.stringify(edge)}</p>)
-
 
   const { edges: posts } = data.allMarkdownRemark
   return <div className="columns is-multiline">
     {posts &&
       posts.map(({ node: post }) => (
 
-        <div className="is-parent column is-6">
-        <div className="card"  key={post.id}>
-
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left">
-                <figure class="image is-48x48">
+        <div className="is-parent column is-6" key={post.id}>
+        <div className="card">
+          <div className="card-content">
+            <div className="media">
+              <div className="media-left">
+                <figure className="image is-48x48">
                   {post.frontmatter.featuredimage ? (
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage
@@ -65,7 +60,7 @@ export default () => {
                   ) : null}
                 </figure>
               </div>
-              <div class="media-content">
+              <div className="media-content">
                 <p className="post-meta">
                   <Link
                     className="title has-text-primary is-size-4"
@@ -78,7 +73,7 @@ export default () => {
             </div>
 
 
-            <div class="content">
+            <div className="content">
 
               <p>
                 {post.excerpt}

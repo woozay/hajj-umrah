@@ -1,7 +1,6 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from '../components/Layout'
-import FixedImage from "../components/FixedImage";
 import Hero from "../components/Hero";
 import BlogRoll from "../components/BlogRoll";
 
