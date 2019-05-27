@@ -17,6 +17,7 @@ export default () => {
     const FORM_NAME = 'https://docs.google.com/forms/d/e/1FAIpQLSdAVfq4LuWS2ElmZbYsI2LNdrMtbg-sjUtvOCb704ESZ4k8NQ/formResponse';
     const GOOGLE_FORM_EMAIL_ID = 'entry.1887565007';
     const GOOGLE_FORM_MESSAGE_ID = 'entry.1949571276';
+    const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
 
     const [submitError, setSubmitError] = useState('')
     const [submitting, setSubmitting] = useState(false);
@@ -32,7 +33,7 @@ export default () => {
         formData.append(GOOGLE_FORM_EMAIL_ID, email.value);
 
         try {
-            let response = await fetch(FORM_NAME, {
+            let response = await fetch(CORS_PROXY+FORM_NAME, {
                 method: "POST",
                 body: formData
             });
