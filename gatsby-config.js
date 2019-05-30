@@ -7,8 +7,12 @@
 module.exports = {
   siteMetadata: {
     title: 'Nova Hajj Umrah',
+    companyName: 'Nova Hajj Umrah Ltd.',
     description:
-      'With many years of experience, Nova Hajj Umrah provides Hajj and Umrah Services. Based in Cardiff, we make sure to arrange visa, tickets and food so you can concentrate on your prayers.'
+      'With many years of experience, Nova Hajj Umrah provides Hajj and Umrah Services. Based in Cardiff, we make sure to arrange visa, tickets and food so you can concentrate on your prayers.',
+    address: '88 City Rd, Cardiff CF24 3DD',
+    tel:'+44(0)7977342602',
+    email: 'novahajjumrah@gmail.com'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

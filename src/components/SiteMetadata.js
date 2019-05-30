@@ -7,7 +7,11 @@ const useSiteMetadata = () => {
         site {
           siteMetadata {
             title
+            companyName
             description
+            address
+            tel
+            email
           }
         }
       }
