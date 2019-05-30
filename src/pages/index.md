@@ -1,14 +1,8 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
 image: /img/hajj-background.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: Welcome to Nova Hajj Umrah
+subheading: We specialise in Hajj and Umrah trips
 about: We have been doing this since 1993
 ---
 
