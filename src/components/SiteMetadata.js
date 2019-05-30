@@ -10,6 +10,8 @@ const useSiteMetadata = () => {
             companyName
             description
             address
+            city
+            postcode
             tel
             email
           }

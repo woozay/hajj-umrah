@@ -2,9 +2,10 @@ import React from 'react';
 import { FaPhone, FaRegBuilding, FaRegUser, FaHome } from 'react-icons/fa';
 
 import useSiteMetadata from './SiteMetadata';
+import ContactCard from './ContactCard'
 
 export default () => {
-    const { title, companyName, address, tel, email } = useSiteMetadata();
+    const { title } = useSiteMetadata();
 
     return <footer className="footer has-background-white-ter has-text-grey">
         <div className="container">
@@ -16,10 +17,7 @@ export default () => {
             </div>
             <div className="column">
                 <div className="content">
-                    <p><FaRegBuilding /> {companyName}</p>
-                    <p><FaHome /> {address}</p>
-                    <p><FaRegUser /> {email}</p>
-                    <p><FaPhone /> <a href={'tel:'+tel}>{tel}</a></p>
+                    <ContactCard />
                 </div>
             </div>
         </div>

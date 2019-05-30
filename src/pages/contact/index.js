@@ -1,5 +1,9 @@
 import React, {useState} from "react"
+
 import Layout from '../../components/Layout'
+import useSiteMetadata from '../../components/SiteMetadata';
+import ContactCard from "../../components/ContactCard";
+
 
 export default () => {
     const useInputHook = initialValue => {
@@ -18,6 +22,8 @@ export default () => {
     const GOOGLE_FORM_EMAIL_ID = 'entry.1887565007';
     const GOOGLE_FORM_MESSAGE_ID = 'entry.1949571276';
     const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
+
+    const siteMetadata = useSiteMetadata();
 
     const [submitError, setSubmitError] = useState('')
     const [submitting, setSubmitting] = useState(false);
@@ -56,7 +62,9 @@ export default () => {
         </section>
         <section className="section">
             <div className="container">
-                <p>Tel: 0202020</p>
+                <div className="content">
+                    <ContactCard />
+                </div>
             </div>
         </section>
         <section className="section">

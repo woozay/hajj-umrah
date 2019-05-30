@@ -1,12 +1,33 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Helmet from 'react-helmet'
+
 import Layout from '../components/Layout'
 import Hero from "../components/Hero";
 import BlogRoll from "../components/BlogRoll";
 
-const IndexPage = ({data}) => {
+const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
+  const { siteMetadata } = data.site
+  const structuredJSON = {
+    "@context": "http://schema.org",
+    "@type": "LocalBusiness",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB",
+      "addressLocality": siteMetadata.city,
+      "streetAddress": siteMetadata.address,
+      "postalCode": siteMetadata.postcode
+    },
+    "description": siteMetadata.description,
+    "name": siteMetadata.title,
+    "telephone": siteMetadata.tel
+  }
   return <Layout>
+    <Helmet titleTemplate="%s | Blog">
+      <script type="application/ld+json">{JSON.stringify(structuredJSON)}</script>
+    </Helmet>
+    {}
     <Hero heading={frontmatter.heading} subheading={frontmatter.subheading} image={frontmatter.image} />
     <section className="section">
       <div className="container">
@@ -22,7 +43,7 @@ const IndexPage = ({data}) => {
     <section className="section has-background-dark">
       <div className="container content has-text-white">
         <h1 className="has-text-white">About</h1>
-        <p>{ frontmatter.about }</p>
+        <p>{frontmatter.about}</p>
       </div>
     </section>
   </Layout>
@@ -31,6 +52,18 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
+    site {
+      siteMetadata {
+        title
+        companyName
+        description
+        address
+        city
+        postcode
+        tel
+        email
+      }
+    }
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
