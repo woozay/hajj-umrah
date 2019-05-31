@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 import Hero from "../components/Hero";
 import BlogRoll from "../components/BlogRoll";
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
@@ -45,6 +46,19 @@ const IndexPage = ({ data }) => {
         <div dangerouslySetInnerHTML={{ __html: frontmatter.about }} />
       </div>
     </section>
+    <section className="section">
+      <div className="container">
+        <div className="level">
+          {frontmatter.bottomImages.map(bi => {
+            return <div className="level-item">
+                <figuire className="image">
+                  <img src={'/img/'+bi.image.relativePath} alt={bi.alt}></img>
+                </figuire>
+              </div>
+          })}
+        </div>
+      </div>
+    </section>
   </Layout>
 }
 export default IndexPage
@@ -77,6 +91,12 @@ export const pageQuery = graphql`
         subheading
         description
         about
+        bottomImages {
+          image {
+            relativePath
+          }
+          alt
+        }
       }
     }
   }
