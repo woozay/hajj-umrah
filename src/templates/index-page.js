@@ -24,10 +24,9 @@ const IndexPage = ({ data }) => {
     "telephone": siteMetadata.tel
   }
   return <Layout>
-    <Helmet titleTemplate="%s | Blog">
+    <Helmet>
       <script type="application/ld+json">{JSON.stringify(structuredJSON)}</script>
     </Helmet>
-    {}
     <Hero heading={frontmatter.heading} subheading={frontmatter.subheading} image={frontmatter.image} />
     <section className="section">
       <div className="container">
