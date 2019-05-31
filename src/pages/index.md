@@ -15,5 +15,10 @@ about: >-
 
   When you are there we will ensure that food, travel and accommodation is all
   sorted, so that you can concentrate on your prayers.
+bottomImages:
+  - alt: We are ATOL protected
+    image: /img/atol-logo.jpg
+  - alt: We are a Licenced Hajj Organiser
+    image: /img/lho.png
 ---
 
