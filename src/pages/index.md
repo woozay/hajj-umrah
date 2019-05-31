@@ -4,9 +4,9 @@ image: /img/hajj-background.jpg
 heading: Welcome to Nova Hajj Umrah
 subheading: We specialise in Hajj and Umrah trips
 about: >-
-  Based in Cardiff on City Road, the group leader Qari Ghulam Nabi Hafiz has
-  been providing Hajj and Umrah services for over 25 years. This has allowed us
-  to gain valuable contacts within Makkah and Medina.
+  Based in Cardiff, the group leader Qari Ghulam Nabi Hafiz has been providing
+  Hajj and Umrah services for over 25 years. This has allowed us to gain
+  valuable contacts within Makkah and Medina.
 
 
   Before you set off, we provide numerous group meetings to educate you on what
