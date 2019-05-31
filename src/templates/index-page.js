@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
     <section className="section has-background-dark">
       <div className="container content has-text-white">
         <h1 className="has-text-white">About</h1>
-        <p>{frontmatter.about}</p>
+        <div dangerouslySetInnerHTML={{ __html: frontmatter.about }} />
       </div>
     </section>
   </Layout>
