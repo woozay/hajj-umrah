@@ -64,6 +64,7 @@ export default () => {
             <div className="container">
                 <div className="content">
                     <ContactCard />
+                    <p>If you would like to go to umrah on alternative days, please do not hesitate to contact us</p>
                 </div>
             </div>
         </section>
