@@ -15,7 +15,7 @@ const BlogPost = ({ data }) => {
     </Helmet>
     <section className="hero is-dark">
       <div className="hero-body">
-        <div className="container">
+        <div className="container blog-post">
           <h1 className="title">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.description}</p>
         </div>

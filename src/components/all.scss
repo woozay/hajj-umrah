@@ -67,6 +67,12 @@ $positions: (
     }
 }
 
+.blog-post ul {
+    list-style: disc;
+}
+.blog-post ul li {
+    margin-left: 2em;
+}
 .full-width-image-container{
   width: 100vw;
   height: 400px;
