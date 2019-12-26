@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Umrah 2020
 date: 2019-12-26T11:26:28.727Z
-description: Book you place now for Umrah in 2020
+description: 'Book you place now for Umrah, 13th February until 23rd February'
 featuredimage: /img/hajj-2019.jpg
 tags:
   - umrah
